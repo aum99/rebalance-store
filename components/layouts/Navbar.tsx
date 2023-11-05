@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Link from "next/link";
 
-import getCategory from "@/actions/getCategories";
+import getCategories from "@/actions/getCategories";
 
 import Container from "@/components/layouts/Container";
 import MainNav from "@/components/layouts/MainNav";
@@ -12,7 +12,7 @@ interface NavbarProps {}
 export const revalidate = 0;
 
 const Navbar: FC<NavbarProps> = async ({}) => {
-  const categories = await getCategory();
+  const categories = await getCategories();
   return (
     <div className="border-b">
       <Container>
