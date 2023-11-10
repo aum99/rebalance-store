@@ -6,6 +6,7 @@ import getCategories from "@/actions/getCategories";
 import Container from "@/components/layouts/Container";
 import MainNav from "@/components/layouts/MainNav";
 import NavbarActions from "@/components/layouts/NavbarActions";
+import { MobileNav } from "./MobileNav";
 
 interface NavbarProps {}
 
@@ -17,7 +18,8 @@ const Navbar: FC<NavbarProps> = async ({}) => {
     <div className="border-b">
       <Container>
         <div className="relative px-4 sm:px-6 flex h-16 items-center">
-          <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
+          <MobileNav data={categories} />
+          <Link href="/" className="ml-4 sm:ml-auto flex lg:ml-0 gap-x-2">
             <p className="font-bold text-xl">Rebalance</p>
           </Link>
           <MainNav data={categories} />
