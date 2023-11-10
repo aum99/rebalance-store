@@ -9,9 +9,9 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "@/components/ui/ScrollArea";
 import Button from "@/components/Button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/Sheet";
 
 interface MobileNavProps {
   data: Category[];
