@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 import useCart from "@/hooks/useCart";
 
@@ -11,7 +11,17 @@ import Summary from "./components/Summary";
 interface pageProps {}
 
 const CartPage: FC<pageProps> = ({}) => {
+  const [isMounted, setIsMounted] = useState(false);
   const cart = useCart();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div className="bg-white">
       <Container>
