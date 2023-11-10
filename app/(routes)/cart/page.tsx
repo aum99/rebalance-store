@@ -6,6 +6,7 @@ import useCart from "@/hooks/useCart";
 
 import Container from "@/components/layouts/Container";
 import CartItem from "./components/CartItem";
+import Summary from "./components/Summary";
 
 interface pageProps {}
 
@@ -27,6 +28,7 @@ const CartPage: FC<pageProps> = ({}) => {
                 ))}
               </ul>
             </div>
+            <Summary />
           </div>
         </div>
       </Container>
